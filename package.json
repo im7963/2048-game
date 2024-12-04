@@ -1,0 +1,12 @@
+{
+  "name": "2048-pro",
+  "version": "1.0.0",
+  "description": "An addictive puzzle game with smooth animations",
+  "main": "index.html",
+  "scripts": {
+    "start": "serve ."
+  },
+  "keywords": ["game", "puzzle", "2048", "brain game"],
+  "author": "Your Name",
+  "license": "MIT"
+}

@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2048 Pro - The Addictive Puzzle Game</title>
+    <meta name="description" content="Play 2048, the addictive number puzzle game. Join millions of players worldwide!">
+    <link rel="stylesheet" href="styles.css">
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=YOUR-GA-ID"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'YOUR-GA-ID');
+    </script>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="brand">
+                <h1>2048 Pro</h1>
+                <div class="stats">
+                    <div class="score-container">
+                        <div class="score-label">Score</div>
+                        <div id="score">0</div>
+                    </div>
+                    <div class="best-container">
+                        <div class="best-label">Best</div>
+                        <div id="best-score">0</div>
+                    </div>
+                </div>
+            </div>
+            <div class="controls">
+                <button id="new-game" class="button">New Game</button>
+                <button id="undo" class="button">Undo</button>
+            </div>
+        </div>
+
+        <!-- Top Ad Space -->
+        <div class="ad-container" id="top-ad">
+            <div class="ad-placeholder">Advertisement</div>
+        </div>
+
+        <div class="game-container">
+            <div id="grid"></div>
+            <div id="game-over" class="overlay hidden">
+                <div class="overlay-content">
+                    <h2>Game Over!</h2>
+                    <p>Score: <span id="final-score">0</span></p>
+                    <button id="retry" class="button">Try Again</button>
+                    <div class="share-buttons">
+                        <button onclick="shareScore('twitter')" class="share-button twitter">Tweet Score</button>
+                        <button onclick="shareScore('facebook')" class="share-button facebook">Share on Facebook</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Bottom Ad Space -->
+        <div class="ad-container" id="bottom-ad">
+            <div class="ad-placeholder">Advertisement</div>
+        </div>
+
+        <div class="instructions">
+            <p>Use arrow keys or swipe to move tiles</p>
+            <p class="mobile-show">Tap and swipe to move tiles</p>
+        </div>
+
+        <div class="footer">
+            <p> 2024 2048 Pro. All rights reserved.</p>
+            <div class="footer-links">
+                <a href="#" onclick="showPrivacyPolicy()">Privacy Policy</a>
+                <a href="#" onclick="showTerms()">Terms of Use</a>
+                <a href="#" onclick="showContact()">Contact</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal for policies -->
+    <div id="modal" class="modal hidden">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <div id="modal-text"></div>
+        </div>
+    </div>
+
+    <script src="game.js"></script>
+</body>
+</html>
